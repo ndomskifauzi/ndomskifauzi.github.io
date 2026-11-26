@@ -141,7 +141,8 @@ function inner(lang, path) {
     const caption = lang === 'id' ? 'Tampilan beranda publik ' : 'Public homepage of ';
     content = `<div class="wrap">${pageHeader(c.readCase,project.name,description)}<div class="article-layout">
       <article class="prose"><figure class="case-image"><img src="/assets/${image}" alt="${caption}${e(project.name)}" width="${width}" height="${height}"><figcaption>${caption}${e(project.name)}</figcaption></figure>${byline(lang)}
-      ${sections(project.case[i])}<p>${inline(project.example,lang === 'id' ? 'Lihat halaman publik' : 'See the public page')}</p></article>
+      ${sections(project.case[i])}<p>${inline(project.example,lang === 'id' ? 'Lihat halaman publik' : 'See the public page')}</p>
+      ${project.authorProfile ? `<p>${inline(project.authorProfile,lang === 'id' ? `Profil Ndomski fauzi di ${project.name}` : `Ndomski fauzi’s profile at ${project.name}`)}</p>` : ''}</article>
       <aside class="contact-card"><p class="eyebrow">${e(c.nav[3])}</p><p>${e(project.role[i])}</p>${tags(project.areas)}${inline(pathFor(lang,'projects/'),c.viewAll)}</aside>
       </div></div>`;
   } else if (article) {

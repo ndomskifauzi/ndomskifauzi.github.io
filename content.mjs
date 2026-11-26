@@ -110,6 +110,7 @@ export const projects = [
       ],
     ],
     example: 'https://www.sewamotordieng.com/2023/10/paket-jeep-wisata-dieng-berwisata-di.html',
+    authorProfile: 'https://www.sewamotordieng.com/p/ndomski-fauzi.html',
   },
   {
     id: 'vd-grup', name: 'VD Grup', url: 'https://vdgrup.id/',
@@ -131,7 +132,8 @@ export const projects = [
         ['What you can inspect', 'The company site presents lodging options and tours with links to their respective detail pages.'],
       ],
     ],
-    example: 'https://vdgrup.id/',
+    example: 'https://vdgrup.id/penginapan/',
+    authorProfile: 'https://vdgrup.id/profil/',
   },
   {
     id: 'glamping-dieng-sunrise-point', name: 'Glamping Dieng Sunrise Point',
