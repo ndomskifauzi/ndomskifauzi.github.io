@@ -16,12 +16,20 @@ jobs:
       contents: read
     steps:
       - uses: actions/checkout@v6
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v6
         with:
           node-version: '24'
       - run: node build.mjs
       - run: node verify.mjs
-      - uses: actions/upload-pages-artifact@v4
+      - name: Add Search Console ownership proof
+        if: ${{ vars.GSC_VERIFICATION_FILENAME != '' }}
+        env:
+          GSC_VERIFICATION_FILENAME: ${{ vars.GSC_VERIFICATION_FILENAME }}
+        shell: bash
+        run: |
+          [[ "$GSC_VERIFICATION_FILENAME" =~ ^google[0-9a-f]+\.html$ ]]
+          printf 'google-site-verification: %s' "$GSC_VERIFICATION_FILENAME" > "dist/$GSC_VERIFICATION_FILENAME"
+      - uses: actions/upload-pages-artifact@v5
         with:
           path: dist
   deploy:
@@ -35,4 +43,4 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
