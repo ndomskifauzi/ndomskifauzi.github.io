@@ -5,7 +5,7 @@ export const headline = 'Developer | Web & UI Development | SEO & Digital Market
 export const profiles = [
   { name: 'GitHub', label: '@ndomskifauzi', url: 'https://github.com/ndomskifauzi', verified: true },
   { name: 'LinkedIn', label: 'Ndomski Fauzy', url: 'https://www.linkedin.com/in/ndomski-fauzy-65b543452/', verified: true },
-  { name: 'Instagram', label: '@or_eyo', url: 'https://www.instagram.com/or_eyo/' },
+  { name: 'Instagram', label: '@or_eyo', url: 'https://www.instagram.com/or_eyo/', verified: true },
   { name: 'Facebook', label: 'Fauzy_alf', url: 'https://www.facebook.com/fauzy.alf', verified: true },
   { name: 'YouTube', label: '@degafauzi7831', url: 'https://www.youtube.com/@degafauzi7831', verified: true },
   { name: 'TikTok', label: '@pixel.crovz', url: 'https://www.tiktok.com/@pixel.crovz' },
