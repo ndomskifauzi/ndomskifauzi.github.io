@@ -26,11 +26,11 @@ const assets = ['style.css', 'favicon.png', 'social-card.jpg', 'ndomski-fauzi.we
   ...projects.flatMap(p => [p.image,p.screenshot?.[0]]).filter(Boolean)];
 
 function picture(lang, size = 'hero') {
-  const alt = lang === 'id' ? 'Potret monokrom Ndomski fauzi' : 'Black-and-white portrait of Ndomski fauzi';
+  const alt = lang === 'id' ? 'Ndomski fauzi di depan komputer' : 'Ndomski fauzi at his computer';
   const priority = size === 'hero' ? ' fetchpriority="high"' : '';
   const slot = size === 'hero' ? '(max-width: 650px) 90vw, (max-width: 900px) 45vw, 467px' : '(max-width: 650px) 90vw, 400px';
   const fallback = size === 'hero' ? portrait : '/assets/ndomski-fauzi-800.webp';
-  return `<figure class="portrait portrait--${size}"><div class="portrait-frame"><img src="${fallback}" srcset="/assets/ndomski-fauzi-400.webp 400w, /assets/ndomski-fauzi-800.webp 800w, ${portrait} 1000w" sizes="${slot}" width="1000" height="1094" alt="${alt}"${priority}></div><figcaption><span class="location-point" aria-hidden="true"></span>${e(copy[lang].location)}</figcaption></figure>`;
+  return `<figure class="portrait portrait--${size}"><div class="portrait-frame"><img src="${fallback}" srcset="/assets/ndomski-fauzi-400.webp 400w, /assets/ndomski-fauzi-800.webp 800w, ${portrait} 1000w" sizes="${slot}" width="1000" height="1000" alt="${alt}"${priority}></div><figcaption><span class="location-point" aria-hidden="true"></span>${e(copy[lang].location)}</figcaption></figure>`;
 }
 
 function header(lang, path) {
